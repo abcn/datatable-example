@@ -11,7 +11,7 @@
 
 
 {{ Datatable::table()
-    ->addColumn('id','username','email','first_name', 'last_name')       // these are the column headings to be shown
+    ->addColumn('id','username','email','first_name', 'last_name','role')       // these are the column headings to be shown
     ->setUrl(route('api.users'))   // this is the route where data will be retrieved
     ->render() }}
 

@@ -24,6 +24,9 @@ class HomeController extends BaseController {
 	{
 		return Datatable::collection(User::all())
         ->showColumns('id','username','email','first_name', 'last_name')
+        ->addColumn('role', function($model){
+        	return $model->roles()->first()->name;
+         })
         ->searchColumns('username')
         ->orderColumns('id','email')
         ->make();
